@@ -18,9 +18,13 @@ const tail = function(array) {
 //Test Arrays
 const testArray1 = [1,2,3,4,5];
 const testArray2 = ['Luis', 'Angus', 'Ryan', 'Raymond'];
+const testArray3 = ['Lighthouse Labs'];
+const testArray4 = [];
 //Testing for tail functionality.
 console.log(tail(testArray1));
 console.log(tail(testArray2));
+console.log(tail(testArray3));
+console.log(tail(testArray4));
 //Testing to ensure original array is not modified.
 console.log(testArray1);
 console.log(testArray2);
