@@ -1,8 +1,8 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
-  } 
-    return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
+  }
+  return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
   
 };
 
@@ -18,7 +18,7 @@ const countLetters = function(sentence) {
   let results = {};
   let newSentence = eliminateSpaces(sentence);
   for (let char of newSentence) {
-    results[char] ? results[char]++ : results[char]=1;
+    results[char] ? results[char]++ : results[char] = 1;
   }
   return results;
 };

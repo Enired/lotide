@@ -14,26 +14,26 @@ const eqArrays = function(arrayOne, arrayTwo) {
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   if (eqArrays(arrayOne, arrayTwo)) {
     return console.log(`✔️Assertion passed: ${arrayOne} === ${arrayTwo}`);
-  } 
-    return console.log(`❌Assertion failed: ${arrayOne} !== ${arrayTwo}`);
+  }
+  return console.log(`❌Assertion failed: ${arrayOne} !== ${arrayTwo}`);
   
 };
 
-const checkIfSpace = (character) => character === ' ' ? true : false
+const checkIfSpace = (character) => character === ' ' ? true : false;
 
 //Main Code
 const letterPositions = function(sentence) {
   const results = {};
   for (let charIndex = 0; charIndex < sentence.length; charIndex++) {
-    if(!checkIfSpace(sentence[charIndex])){
-        results[sentence[charIndex]] ? results[sentence[charIndex]].push(charIndex) : results[sentence[charIndex]] = [charIndex];
+    if (!checkIfSpace(sentence[charIndex])) {
+      results[sentence[charIndex]] ? results[sentence[charIndex]].push(charIndex) : results[sentence[charIndex]] = [charIndex];
     }
   }
   return results;
 };
 
 //Testing
-console.log('Assert Test 1')
+console.log('Assert Test 1');
 const alphaTestString = 'hello';
 const alphaExpected = {h:[0],e:[1],l:[2,3],o:[4]};
 const alphaResult = letterPositions(alphaTestString);
@@ -41,11 +41,11 @@ const alphaResult = letterPositions(alphaTestString);
 assertArraysEqual(alphaResult.e, alphaExpected.e);
 assertArraysEqual(alphaResult.l, alphaExpected.l);
 assertArraysEqual(alphaResult.o, alphaExpected.o);
-console.log(`-----`)
-console.log('Assert Test 2')
+console.log(`-----`);
+console.log('Assert Test 2');
 const betaTestString = 'lighthouse in the house';
 const betaResult = letterPositions(betaTestString);
-const betaExpected = { l: [0], i: [1, 11], g: [2], h: [3, 5, 15, 18], t: [4, 14], o: [6, 19], u: [7, 20], s: [8, 21], e: [9, 16, 22], n: [12]}
+const betaExpected = { l: [0], i: [1, 11], g: [2], h: [3, 5, 15, 18], t: [4, 14], o: [6, 19], u: [7, 20], s: [8, 21], e: [9, 16, 22], n: [12]};
 assertArraysEqual(betaResult.t, betaExpected.t);
 assertArraysEqual(betaResult.e, betaExpected.e);
 assertArraysEqual(betaResult.h, betaExpected.h);

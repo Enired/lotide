@@ -1,3 +1,15 @@
+const eqArrays = function(arrayOne, arrayTwo) {
+  if (arrayOne.length === arrayTwo.length) {
+    for (let i = 0; i < arrayOne.length; i++) {
+      if (arrayOne[i] !== arrayTwo[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  return false;
+};
+
 const eqObjects = function(objectOne, objectTwo) {
   if (Object.keys(objectOne).length !== Object.keys(objectTwo).length) {
     return false;
@@ -14,13 +26,13 @@ const eqObjects = function(objectOne, objectTwo) {
 
 };
 
-const assertObjectsEqual = function(objectOne, objectTwo){
+const assertObjectsEqual = function(objectOne, objectTwo) {
   const inspect = require('util').inspect;
   if (eqObjects(objectOne, objectTwo)) {
     return console.log(`✔️Assertion passed: ${inspect(objectOne)} === ${inspect(objectTwo)}`);
   }
-   return console.log(`❌Assertion failed: ${inspect(objectOne)} !== ${inspect(objectTwo)}`);
-}
+  return console.log(`❌Assertion failed: ${inspect(objectOne)} !== ${inspect(objectTwo)}`);
+};
 
-assertObjectsEqual({hello:1,goodbye:2},{goodbye:2, hello:1})
-assertObjectsEqual({hello:1,goodbye:2}, {hello:1,goodbye:2, sayonara: 3})
+assertObjectsEqual({hello:1,goodbye:2},{goodbye:2, hello:1});
+assertObjectsEqual({hello:1,goodbye:2}, {hello:1,goodbye:2, sayonara: 3});
