@@ -23,11 +23,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 const letterPositions = function(sentence) {
   const results = {};
   for (let charIndex = 0; charIndex < sentence.length; charIndex++) {
-    if (results[sentence[charIndex]]) {
-      results[sentence[charIndex]].push(charIndex);
-    } else {
-      results[sentence[charIndex]] = [charIndex];
-    }
+    results[sentence[charIndex]] ? results[sentence[charIndex]].push(charIndex) : results[sentence[charIndex]] = [charIndex]
   }
   return results;
 };

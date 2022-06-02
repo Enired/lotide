@@ -18,11 +18,7 @@ const countLetters = function(sentence) {
   let results = {};
   let newSentence = eliminateSpaces(sentence);
   for (let char of newSentence) {
-    if (results[char]) {
-      results[char]++;
-    } else {
-      results[char] = 1;
-    }
+    results[char] ? results[char]++ : results[char]=1;
   }
   return results;
 };

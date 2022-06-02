@@ -21,11 +21,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 const flatten = function(array) {
   let flattenedArray = [];
   for (let element of array) {
-    if (Array.isArray(element)) {
-      flattenedArray = flattenedArray.concat(element);
-    } else {
-      flattenedArray.push(element);
-    }
+    Array.isArray(element) ? flattenedArray = flattenedArray.concat(element) : flattenedArray.push(element);
   }
   //Recursion to flatten deeper arrays.
   for (let element of flattenedArray) {
