@@ -28,7 +28,7 @@ const takeUntil = function(anArray, callBackFunction) {
     }
     slicedArray.push(element);
   }
-  return slicedArray;
+  return anArray; //Returns the same array since nothing needed to be sliced out.
 };
 
 
@@ -54,3 +54,10 @@ console.log(`-----`);
 const charlieResult = takeUntil(apexLegends,legend => legend.includes('B'));
 const charlieExpected = ['Wraith', 'Octane', 'Fuse', 'Horizon', 'Mirage', 'Ash', 'Rampart', 'Pathfinder'];
 assertArraysEqual(charlieResult, charlieExpected);
+console.log(`-----`);
+console.log();
+console.log(`TEST 4`);
+console.log(`-----`);
+const deltaResult = takeUntil(apexLegends,legend => legend.includes('X'));
+const deltaExpected = ['Wraith', 'Octane', 'Fuse', 'Horizon', 'Mirage', 'Ash', 'Rampart', 'Pathfinder', 'Bloodhound', 'Crypto'];
+assertArraysEqual(deltaResult, deltaExpected);
