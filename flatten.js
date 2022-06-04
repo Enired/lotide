@@ -1,29 +1,33 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (arrayOne.length === arrayTwo.length) {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (Array.isArray(arrayOne[i]) && Array.isArray(arrayTwo[i])) {
-        if (!eqArrays(arrayOne[i],arrayTwo[i])) {
-          return false;
-        }
-      } else {
-        if (arrayOne[i] !== arrayTwo[i]) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-  return false;
-};
+// const eqArrays = function(arrayOne, arrayTwo) {
+//   if (arrayOne.length === arrayTwo.length) {
+//     for (let i = 0; i < arrayOne.length; i++) {
+//       if (Array.isArray(arrayOne[i]) && Array.isArray(arrayTwo[i])) {
+//         if (!eqArrays(arrayOne[i],arrayTwo[i])) {
+//           return false;
+//         }
+//       } else {
+//         if (arrayOne[i] !== arrayTwo[i]) {
+//           return false;
+//         }
+//       }
+//     }
+//     return true;
+//   }
+//   return false;
+// };
 
 
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    return console.log(`✔️Assertion passed: ${arrayOne} === ${arrayTwo}`);
-  }
-  return console.log(`❌Assertion failed: ${arrayOne} !== ${arrayTwo}`);
+// const assertArraysEqual = function(arrayOne, arrayTwo) {
+//   if (eqArrays(arrayOne, arrayTwo)) {
+//     return console.log(`✔️Assertion passed: ${arrayOne} === ${arrayTwo}`);
+//   }
+//   return console.log(`❌Assertion failed: ${arrayOne} !== ${arrayTwo}`);
   
-};
+// };
+
+
+// const eqArrays = require('./eqArrays');
+
 
 const flatten = function(array) {
   let flattenedArray = [];
@@ -40,13 +44,15 @@ const flatten = function(array) {
   return flattenedArray;
 };
 
-//Test Cases
-const test1 = [1, 2, [3, 4], 5, [6]];
-const test2 = [1, 2, [3, 4, [5, [6,[7,8]]]]];
-const expect1 = [1,2,3,4,5,6];
-const expect2 = [1,2,3,4,5,6,7,8];
-console.log(flatten(test1));
-console.log(flatten(test2));
+module.exports = flatten;
 
-assertArraysEqual(flatten(test1), expect1);
-assertArraysEqual(flatten(test2), expect2);
+//Test Cases
+// const test1 = [1, 2, [3, 4], 5, [6]];
+// const test2 = [1, 2, [3, 4, [5, [6,[7,8]]]]];
+// const expect1 = [1,2,3,4,5,6];
+// const expect2 = [1,2,3,4,5,6,7,8];
+// console.log(flatten(test1));
+// console.log(flatten(test2));
+
+// assertArraysEqual(flatten(test1), expect1);
+// assertArraysEqual(flatten(test2), expect2);

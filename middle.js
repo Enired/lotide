@@ -1,37 +1,37 @@
 //TEST + ASSERTION FUNCTIONS
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (arrayOne.length === arrayTwo.length) {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (Array.isArray(arrayOne[i]) && Array.isArray(arrayTwo[i])) {
-        if (!eqArrays(arrayOne[i],arrayTwo[i])) {
-          return false;
-        }
-      } else {
-        if (arrayOne[i] !== arrayTwo[i]) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-  return false;
-};
+// const eqArrays = function(arrayOne, arrayTwo) {
+//   if (arrayOne.length === arrayTwo.length) {
+//     for (let i = 0; i < arrayOne.length; i++) {
+//       if (Array.isArray(arrayOne[i]) && Array.isArray(arrayTwo[i])) {
+//         if (!eqArrays(arrayOne[i],arrayTwo[i])) {
+//           return false;
+//         }
+//       } else {
+//         if (arrayOne[i] !== arrayTwo[i]) {
+//           return false;
+//         }
+//       }
+//     }
+//     return true;
+//   }
+//   return false;
+// };
 
 
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    return console.log(`✔️Assertion passed: ${arrayOne} === ${arrayTwo}`);
-  }
-  return console.log(`❌Assertion failed: ${arrayOne} !== ${arrayTwo}`);
+// const assertArraysEqual = function(arrayOne, arrayTwo) {
+//   if (eqArrays(arrayOne, arrayTwo)) {
+//     return console.log(`✔️Assertion passed: ${arrayOne} === ${arrayTwo}`);
+//   }
+//   return console.log(`❌Assertion failed: ${arrayOne} !== ${arrayTwo}`);
   
-};
+// };
 
-const checkArrayMinLength = function(array) {
-  if (array.length < 3) {
-    return true;
-  }
-  return false;
-};
+// const checkArrayMinLength = function(array) {
+//   if (array.length < 3) {
+//     return true;
+//   }
+//   return false;
+// };
 
 
 const checkIfArrayIsEven = function(array) { //Only need to check for even, because if it's not even it's odd.
@@ -58,6 +58,10 @@ const findMiddle = function(array) {
   middle.push(array[findIndexOfMiddle(array)]);
   return middle;
 };
+
+module.exports = checkIfArrayIsEven;
+module.exports = findIndexOfMiddle;
+module.exports = findMiddle;
 
 //Test Code
 const testCaseNum1 = findMiddle([0,1,2,3,4,5]);

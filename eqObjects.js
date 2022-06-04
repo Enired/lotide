@@ -1,11 +1,11 @@
 //Assert Functions
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
-  }
-  return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
+//   }
+//   return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
   
-};
+// };
 
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length === arrayTwo.length) {
@@ -25,6 +25,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return false;
 };
 
+
+const eqArrays = require('./eqArrays');
 
 
 const eqObjects = function(objectOne, objectTwo) {
@@ -139,7 +141,10 @@ const apexLegendsEcho = {
   }
 };
 
-assertEqual(eqObjects(apexLegendsAlpha, apexLegendsBeta), true);
-assertEqual(eqObjects(apexLegendsAlpha, apexLegendsCharlie), false);
-assertEqual(eqObjects(apexLegendsCharlie, apexLegendsDelta), true);
-assertEqual(eqObjects(apexLegendsDelta, apexLegendsEcho), false);
+// assertEqual(eqObjects(apexLegendsAlpha, apexLegendsBeta), true);
+// assertEqual(eqObjects(apexLegendsAlpha, apexLegendsCharlie), false);
+// assertEqual(eqObjects(apexLegendsCharlie, apexLegendsDelta), true);
+// assertEqual(eqObjects(apexLegendsDelta, apexLegendsEcho), false);
+
+
+module.exports = eqObjects;

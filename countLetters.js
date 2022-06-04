@@ -1,10 +1,10 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
-  }
-  return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
+//   }
+//   return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
   
-};
+// };
 
 const eliminateSpaces = function(sentence) {
   let sentenceWhitespacesRemoved = sentence;
@@ -23,14 +23,17 @@ const countLetters = function(sentence) {
   return results;
 };
 
-let alphaTestString = 'derine is here';
-let betaTestString = 'what am i doing';
-let charlieTestString = 'imposter syndrome';
+module.exports = eliminateSpaces;
+module.exports = countLetters;
 
-const alphaResult = countLetters(alphaTestString);
-const betaResult = countLetters(betaTestString);
-const charlieResult = countLetters(charlieTestString);
+// let alphaTestString = 'derine is here';
+// let betaTestString = 'what am i doing';
+// let charlieTestString = 'imposter syndrome';
 
-assertEqual(alphaResult.i, 2);
-assertEqual(betaResult.a, 2);
-assertEqual(charlieResult.s, 2);
+// const alphaResult = countLetters(alphaTestString);
+// const betaResult = countLetters(betaTestString);
+// const charlieResult = countLetters(charlieTestString);
+
+// assertEqual(alphaResult.i, 2);
+// assertEqual(betaResult.a, 2);
+// assertEqual(charlieResult.s, 2);
