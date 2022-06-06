@@ -2,7 +2,6 @@ const chai = require('chai');
 const assert = chai.assert;
 
 const tail = require('../tail')
-const assertEqual = require('../assertEqual')
 
 //////////////////////////
 // Main Test Code Block //
