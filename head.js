@@ -1,12 +1,9 @@
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
-//   }
-//   return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
-  
-// };
+//Used for Old Tests
+//const assertEqual = require('./assertEqual');
 
-const assertEqual = require('./assertEqual');
+///////////////
+// Main Code //
+///////////////
 
 const head = function(array) {
   if(!array){
@@ -16,6 +13,11 @@ const head = function(array) {
 };
 
 module.exports = head;
+
+
+////////////////////
+// Old Test Cases //
+////////////////////
 
 // assertEqual(head([5,6,7]), 5);
 // assertEqual(head(['Luis','Angus', 'Ryan']), 'Luis');
