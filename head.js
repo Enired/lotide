@@ -6,7 +6,12 @@
   
 // };
 
+const assertEqual = require('./assertEqual');
+
 const head = function(array) {
+  if(!array){
+    return undefined;  
+  }
   return array[0];
 };
 
