@@ -26,12 +26,12 @@
   
 // };
 
-// const checkArrayMinLength = function(array) {
-//   if (array.length < 3) {
-//     return true;
-//   }
-//   return false;
-// };
+const checkArrayMinLength = function(array) {
+  if (array.length < 3) {
+    return true;
+  }
+  return false;
+};
 
 
 const checkIfArrayIsEven = function(array) { //Only need to check for even, because if it's not even it's odd.
@@ -47,36 +47,37 @@ const findIndexOfMiddle = function(array) {
 
 const findMiddle = function(array) {
   let middle = [];
-  if (checkArrayMinLength(array)) {
-    return middle;
-  }
-  if (checkIfArrayIsEven(array)) {
-    middle.push(array[findIndexOfMiddle(array) - 1]);
+  if(array && Array.isArray(array)){
+    if (checkArrayMinLength(array)) {
+      return middle;
+    }
+    if (checkIfArrayIsEven(array)) {
+      middle.push(array[findIndexOfMiddle(array) - 1]);
+      middle.push(array[findIndexOfMiddle(array)]);
+      return middle;
+    }
     middle.push(array[findIndexOfMiddle(array)]);
-    return middle;
   }
-  middle.push(array[findIndexOfMiddle(array)]);
   return middle;
 };
 
-module.exports = checkIfArrayIsEven;
-module.exports = findIndexOfMiddle;
+
 module.exports = findMiddle;
 
-//Test Code
-const testCaseNum1 = findMiddle([0,1,2,3,4,5]);
-const testCaseNum2 = findMiddle([0,1,2,3,4,5,6]);
+// //Test Code
+// const testCaseNum1 = findMiddle([0,1,2,3,4,5]);
+// const testCaseNum2 = findMiddle([0,1,2,3,4,5,6]);
 
-console.log(testCaseNum1);
-console.log(testCaseNum2);
-const testCaseString1 = findMiddle(['Ryan','Luis','Angus','Raymond']);
-const testCaseString2 = findMiddle(['Ryan','Luis','Angus','Raymond','Tommy']);
-console.log(testCaseString1);
-console.log(testCaseString2);
+// console.log(testCaseNum1);
+// console.log(testCaseNum2);
+// const testCaseString1 = findMiddle(['Ryan','Luis','Angus','Raymond']);
+// const testCaseString2 = findMiddle(['Ryan','Luis','Angus','Raymond','Tommy']);
+// console.log(testCaseString1);
+// console.log(testCaseString2);
 
-assertArraysEqual(testCaseNum1, [2,3]);
-assertArraysEqual(testCaseNum2, [3]);
+// assertArraysEqual(testCaseNum1, [2,3]);
+// assertArraysEqual(testCaseNum2, [3]);
 
-assertArraysEqual(testCaseString1, ['Luis', 'Angus']);
-assertArraysEqual(testCaseString2, ['Angus']);
+// assertArraysEqual(testCaseString1, ['Luis', 'Angus']);
+// assertArraysEqual(testCaseString2, ['Angus']);
 
