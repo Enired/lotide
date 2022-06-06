@@ -1,23 +1,25 @@
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
-//   }
-//   return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
+  }
+  return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
   
-// };
+};
 
 
 const tail = function(array) {
   let newArray = [];
-  for (let i = 1; i < array.length; i++) {
-    newArray.push(array[i]);
+  if(array && Array.isArray()){
+    for (let i = 1; i < array.length; i++) {
+      newArray.push(array[i]);
+    }
   }
   return newArray;
 };
 
 module.exports = tail;
 
-// //Test Arrays
+//Test Arrays
 // const testArray1 = [1,2,3,4,5];
 // const testArray2 = ['Luis', 'Angus', 'Ryan', 'Raymond'];
 // const testArray3 = ['Lighthouse Labs'];
