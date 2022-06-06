@@ -2,9 +2,6 @@ const chai = require('chai');
 const findMiddle = require('../middle');
 const assert = chai.assert;
 
-const middle = require('../middle');
-
-
 // const testCaseNum1 = findMiddle([0,1,2,3,4,5]);
 // const testCaseNum2 = findMiddle([0,1,2,3,4,5,6]);
 
