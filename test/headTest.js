@@ -6,14 +6,16 @@ const assertEqual = require('../assertEqual');
 
 const runTest = assertEqual(this.result,this.expected);
 
+//////////////////////////
+// Main Test Code Block //
+//////////////////////////
+
 describe('Tests for head.js. Returns the value in position 0 of an array.', function(){
   it('should return the first value in an array of numbers.', function(){
     testArray = [5,6,7];
     result = head(testArray);
     expected = 5;
     runTest;
-
-    // assertEqual(result,expected);
   })
 
   it('should return the first value in an array of strings', function(){
