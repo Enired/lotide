@@ -43,4 +43,10 @@ describe('Tests for head.js. Returns the value in position 0 of an array.', func
     expected = undefined;
     runTest;
   })
+
+  it('should return undefined when a parameter is not passed in.', function(){
+    const result = head();
+    expected = undefined;
+    runTest;
+  })
 })
