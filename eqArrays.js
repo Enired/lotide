@@ -1,4 +1,7 @@
-const assertEqual = require('./assertEqual');
+////////////////////////
+// Used for Old Tests //
+////////////////////////
+// const assertEqual = require('./assertEqual');
 
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length === arrayTwo.length) {
@@ -18,11 +21,15 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return false;
 };
 
-console.log(`🎈eqArrays.js testing`)
-assertEqual(eqArrays([1, [2], 3], [1, [2], 3]), true);
-assertEqual(eqArrays(['Angus', 'Luis', 'Ryan'], ['Angus', 'Luis', 'Ryan']), true);
-assertEqual(eqArrays([1, '2', 3], [1, 2, 3]), false);
-assertEqual(eqArrays([1, 2, 3], []), false);
-assertEqual(eqArrays([1, 2, 3], [1, null, 3]), false);
+///////////////
+// Old Tests //
+///////////////
+
+// console.log(`🎈eqArrays.js testing`)
+// assertEqual(eqArrays([1, [2], 3], [1, [2], 3]), true);
+// assertEqual(eqArrays(['Angus', 'Luis', 'Ryan'], ['Angus', 'Luis', 'Ryan']), true);
+// assertEqual(eqArrays([1, '2', 3], [1, 2, 3]), false);
+// assertEqual(eqArrays([1, 2, 3], []), false);
+// assertEqual(eqArrays([1, 2, 3], [1, null, 3]), false);
 
 module.exports = eqArrays;
