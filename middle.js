@@ -19,7 +19,7 @@ const findIndexOfMiddle = function(array) {
 
 const findMiddle = function(array) {
   let middle = [];
-  if(array && Array.isArray(array)){
+  if (array && Array.isArray(array)) {
     if (checkArrayMinLength(array)) {
       return middle;
     }

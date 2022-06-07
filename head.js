@@ -3,8 +3,8 @@
 ///////////////
 
 const head = function(array) {
-  if(!array){
-    return undefined;  
+  if (!array) {
+    return undefined;
   }
   return array[0];
 };
