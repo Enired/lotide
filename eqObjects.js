@@ -1,7 +1,7 @@
 const eqArrays = require('./eqArrays');
 
 const eqObjects = function(objectOne, objectTwo) {
-  if(objectOne && objectTwo){
+  if (objectOne && objectTwo) {
     
     if (Object.keys(objectOne).length !== Object.keys(objectTwo).length) {
       return false;

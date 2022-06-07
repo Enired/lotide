@@ -1,4 +1,4 @@
-const chai = require('chai')
+const chai = require('chai');
 const assert = chai.assert;
 const _ = require('../index');
 const eqObjects = _.eqObjects;
@@ -30,7 +30,7 @@ describe('Tests for eqObjects.js. Determines if 2 given objects are equal or not
     const expected = true;
     
     assert.equal(result, expected);
-  })
+  });
   
   it('should return false when 2 objects are not equal.', () => {
     const testArrayOne = {
@@ -45,25 +45,25 @@ describe('Tests for eqObjects.js. Determines if 2 given objects are equal or not
     };
     
     const testArrayTwo = {
-  Wraith: {
-    gender: 'female',
-    hair: false
-  },
-  Bloodhound : {
-    gender: 'female',
-    hair: {
-      helmet: true,
-      hat: true
-    }
-  }
-};
+      Wraith: {
+        gender: 'female',
+        hair: false
+      },
+      Bloodhound : {
+        gender: 'female',
+        hair: {
+          helmet: true,
+          hat: true
+        }
+      }
+    };
 
-const result = eqObjects(testArrayOne, testArrayTwo)
-const expected = false;
+    const result = eqObjects(testArrayOne, testArrayTwo);
+    const expected = false;
 
-assert.equal(result, expected)
+    assert.equal(result, expected);
 
-  })
+  });
 
   it('should return false if one of the arrays is undefined', () => {
     let testArrayOne;
@@ -82,12 +82,12 @@ assert.equal(result, expected)
     };
   
     
-  const result = eqObjects(testArrayOne, testArrayTwo)
-  const expected = false;
+    const result = eqObjects(testArrayOne, testArrayTwo);
+    const expected = false;
   
-  assert.equal(result, expected)
+    assert.equal(result, expected);
     
-  })
+  });
   it('should return false if one of the arrays is undefined', () => {
     const testArrayOne = {
       Wraith: {
@@ -106,14 +106,14 @@ assert.equal(result, expected)
     let testArrayTwo;
   
     
-  const result = eqObjects(testArrayOne, testArrayTwo)
-  const expected = false;
+    const result = eqObjects(testArrayOne, testArrayTwo);
+    const expected = false;
   
-  assert.equal(result, expected)
+    assert.equal(result, expected);
     
-  })
+  });
 
-})
+});
 
 
 

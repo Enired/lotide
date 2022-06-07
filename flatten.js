@@ -1,6 +1,6 @@
 const flatten = function(array) {
   let flattenedArray = [];
-  if(array && Array.isArray(array)){
+  if (array && Array.isArray(array)) {
 
     for (let element of array) {
       Array.isArray(element) ? flattenedArray = flattenedArray.concat(element) : flattenedArray.push(element);
