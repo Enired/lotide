@@ -1,7 +1,6 @@
 const chai = require('chai');
 const assert = chai.assert;
 const _ = require('../index');
-const takeUntil = require('../takeUntil');
 
 const countOnly = _.countOnly;
 
