@@ -5,26 +5,6 @@ const takeUntil = require('../takeUntil');
 
 const countOnly = _.countOnly;
 
-// const firstNames = [
-//   "Karl",
-//   "Salima",
-//   "Agouhanna",
-//   "Fang",
-//   "Kavith",
-//   "Jason",
-//   "Salima",
-//   "Fang",
-//   "Joe"
-// ];
-
-// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-// assertEqual(result1["Jason"], 1);
-// assertEqual(result1["Karima"], undefined);
-// assertEqual(result1["Fang"], 2);
-// assertEqual(result1["Agouhanna"], undefined);
-
-
 describe('Tests for countOnly.js. Determines how many times a specific item occurs in a given list.', () => {
   it('should return an object that determines how many times a name appears if being searched for. (Strings)', () => {
     const testObject = ['Octane', 'Pathfinder', 'Wraith', 'Pathfinder', 'Pathdfinder']
