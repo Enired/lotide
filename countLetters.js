@@ -23,7 +23,6 @@ const countLetters = function(sentence) {
   return results;
 };
 
-module.exports = eliminateSpaces;
 module.exports = countLetters;
 
 // let alphaTestString = 'derine is here';
