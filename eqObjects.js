@@ -1,62 +1,31 @@
-//Assert Functions
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     return console.log(`✔️Assertion passed: ${actual} === ${expected}`);
-//   }
-//   return console.log(`❌Assertion failed: ${actual} !== ${expected}`);
-  
-// };
-
-// const eqArrays = function(arrayOne, arrayTwo) {
-//   if (arrayOne.length === arrayTwo.length) {
-//     for (let i = 0; i < arrayOne.length; i++) {
-//       if (Array.isArray(arrayOne[i]) && Array.isArray(arrayTwo[i])) {
-//         if (!eqArrays(arrayOne[i],arrayTwo[i])) {
-//           return false;
-//         }
-//       } else {
-//         if (arrayOne[i] !== arrayTwo[i]) {
-//           return false;
-//         }
-//       }
-//     }
-//     return true;
-//   }
-//   return false;
-// };
-
-
 const eqArrays = require('./eqArrays');
 
-
 const eqObjects = function(objectOne, objectTwo) {
-  //let result = true;
-  if (Object.keys(objectOne).length !== Object.keys(objectTwo).length) {
-    return false;
-  }
-  for (let key in objectOne) {
+  if(objectOne && objectTwo){
     
-    // if (Array.isArray(objectOne[key]) && Array.isArray(objectTwo[key])) {
-    //   return eqArrays(objectOne[key], objectTwo[key]);
-    // }
-    //NEW CODE
-    if (typeof objectOne[key] === 'object' && typeof objectTwo[key] === 'object') {
-      if (Array.isArray(objectOne[key]) && Array.isArray(objectTwo[key])) {
-        if (!eqArrays(objectOne[key], objectTwo[key])) {
-          return false;
+    if (Object.keys(objectOne).length !== Object.keys(objectTwo).length) {
+      return false;
+    }
+    for (let key in objectOne) {
+      if (typeof objectOne[key] === 'object' && typeof objectTwo[key] === 'object') {
+        if (Array.isArray(objectOne[key]) && Array.isArray(objectTwo[key])) {
+          if (!eqArrays(objectOne[key], objectTwo[key])) {
+            return false;
+          }
+        } else {
+          if (!eqObjects(objectOne[key], objectTwo[key])) {
+            return false;
+          }
         }
       } else {
-        if (!eqObjects(objectOne[key], objectTwo[key])) {
+        if (objectOne[key] !== objectTwo[key]) {
           return false;
         }
       }
-    } else {
-      if (objectOne[key] !== objectTwo[key]) {
-        return false;
-      }
     }
+    return true;
   }
-  return true;
+  return false;
 
 };
 
