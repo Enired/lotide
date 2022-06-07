@@ -2,18 +2,6 @@ const chai = require('chai');
 const assert = chai.assert
 const _ = require('../index');
 
-
-//Test Cases
-// const test1 = [1, 2, [3, 4], 5, [6]];
-// const test2 = [1, 2, [3, 4, [5, [6,[7,8]]]]];
-// const expect1 = [1,2,3,4,5,6];
-// const expect2 = [1,2,3,4,5,6,7,8];
-// console.log(flatten(test1));
-// console.log(flatten(test2));
-
-// assertArraysEqual(flatten(test1), expect1);
-// assertArraysEqual(flatten(test2), expect2);
-
 describe('Tests for flatten.js. Returns a flattened array from a given array that includes nested arrays.', () => {
   it('should return a flattened array from an array that contains nested arrays (2 levels deep)', () => {
     const testArray = [1, 2, [3, 4], 5, [6]]
